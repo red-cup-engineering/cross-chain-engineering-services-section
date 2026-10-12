@@ -1,0 +1,544 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "arbitrum-one",
+  "name": "Arbitrum One",
+  "family": "evm",
+  "network": "mainnet",
+  "testnetOf": null,
+  "caip2": {
+    "value": "eip155:42161",
+    "source": "https://namespaces.chainagnostic.org/eip155/caip2",
+    "readAt": "2026-10-08",
+    "note": "CAIP-2 eip155 reference is the decimal EIP-155 chain id."
+  },
+  "chainId": {
+    "value": 42161,
+    "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+    "readAt": "2026-10-08",
+    "note": "Registry metadata value; verifier cross-checks with eth_chainId on every listed RPC."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "ETH",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 18,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "usdc": {
+    "kind": {
+      "value": "native",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "Listed by Circle as native USDC."
+    },
+    "address": {
+      "value": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 1852,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "symbol()",
+          "returned": "USDC",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "decimals": {
+      "value": 6,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "USDC is 6 decimals; verifier reads decimals() on-chain."
+    }
+  },
+  "cctp": {
+    "domain": {
+      "value": 3,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "tokenMessengerV2": {
+      "value": "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 2175,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "messageTransmitterV2": {
+      "value": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 2175,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "localDomain()",
+          "returned": 3,
+          "matchesRegistry": true
+        }
+      }
+    },
+    "tokenMinterV2": {
+      "value": "0xfd78EE919681417d192449715b2594ab58f5D002",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 9295,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "finality": {
+      "fast": {
+        "value": "1 confirmation, ~8 s",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      },
+      "standard": {
+        "value": "~65 ETH blocks, ~15-19 min",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      }
+    }
+  },
+  "hyperlane": {
+    "domainId": {
+      "value": 42161,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "For EVM chains the Hyperlane domain id equals the chain id."
+    },
+    "mailbox": {
+      "value": "0x979Ca5202784112f4738403dBec5D0F3B9daabB9",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 2555,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "localDomain()",
+          "returned": 42161,
+          "matchesRegistry": true
+        }
+      }
+    },
+    "interchainGasPaymaster": {
+      "value": "0x3b6044acd6767f017e99318AA6Ef93b7B06A5a22",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 2555,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "merkleTreeHook": {
+      "value": "0x748040afB89B8FdBb992799808215419d36A0930",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 6278,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "validatorAnnounce": {
+      "value": "0x1df063280C4166AF9a725e3828b4dAC6c7113B08",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 6136,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "staticMessageIdMultisigIsmFactory": {
+      "value": "0x12Df53079d399a47e9E730df095b712B0FDFA791",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 1426,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "staticAggregationIsmFactory": {
+      "value": "0xD4883084389fC1Eeb4dAfB2ADcFc36B711c310EB",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 1426,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "domainRoutingIsmFactory": {
+      "value": "0xa2931C37957f3079d3B21b877d56E1db930e02a5",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 1054,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    }
+  },
+  "layerzero": {
+    "eid": {
+      "value": 30110,
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "stage": {
+      "value": "mainnet",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "endpointV2": {
+      "value": "0x1a44076050125825900e736c501f859c50fE728c",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry.",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 24005,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "eid()",
+          "returned": 30110,
+          "matchesRegistry": true
+        }
+      }
+    },
+    "sendUln302": {
+      "value": "0x975bcD720be66659e3EB3C0e4F1866a3020E493A",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry.",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 22995,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "receiveUln302": {
+      "value": "0x7B9E184e07a6EE1aC23eAe0fe8D6Be2f663f05e6",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry.",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 11010,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "executor": {
+      "value": "0x31CAe3B7fB82d847621859fb1585353c5720660D",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry.",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 2304,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    }
+  },
+  "ccip": {
+    "chainSelector": {
+      "value": "4949039107694359620",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08",
+      "note": "uint64 as decimal string"
+    },
+    "router": {
+      "value": "0x141fa059441E0ca23ce184B6A78bafD2A517DdE8",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 11130,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    }
+  },
+  "eas": {
+    "eas": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No EAS deployment listed for this chain in the eas-contracts README."
+    },
+    "schemaRegistry": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No SchemaRegistry listed for this chain in the eas-contracts README."
+    }
+  },
+  "safe": {
+    "singleton": {
+      "value": "0x41675C099F32341bf84BFc5382aF534df5C7461a",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 23579,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "VERSION()",
+          "returned": "1.4.1",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "singletonL2": {
+      "value": "0x29fcB43b46531BcA003ddC8FCB67FFE91900C762",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_l2.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 24421,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "proxyFactory": {
+      "value": "0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_proxy_factory.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512984645,
+        "codeBytes": 3054,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    }
+  },
+  "erc4337": {
+    "entryPointV07": {
+      "value": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "source": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0",
+      "readAt": "2026-10-08",
+      "note": "Release notes/README state the canonical address is the same on every chain.",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 16035,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "entryPointV08": {
+      "value": "0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108",
+      "source": "https://github.com/eth-infinitism/account-abstraction/blob/v0.8.0/README.md",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 21738,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    }
+  },
+  "permit2": {
+    "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "source": "https://docs.uniswap.org/contracts/permit2/overview",
+    "readAt": "2026-10-08",
+    "note": "Uniswap: same address on every supported chain except zkSync.",
+    "verification": {
+      "method": "eth_getCode",
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "block": 512984645,
+      "codeBytes": 9152,
+      "verifiedAt": "2026-10-08",
+      "result": "verified"
+    }
+  },
+  "multicall3": {
+    "value": "0xcA11bde05977b3631167028862bE2a173976CA11",
+    "source": "https://github.com/mds1/multicall3/blob/main/deployments.json",
+    "readAt": "2026-10-08",
+    "verification": {
+      "method": "eth_getCode",
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "block": 512984645,
+      "codeBytes": 3808,
+      "verifiedAt": "2026-10-08",
+      "result": "verified",
+      "probe": {
+        "call": "getChainId()",
+        "returned": 42161,
+        "matchesRegistry": true
+      }
+    }
+  },
+  "create2": {
+    "createX": {
+      "value": "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed",
+      "source": "https://github.com/pcaversaccio/createx/blob/main/README.md",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 11838,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    },
+    "arachnidProxy": {
+      "value": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "source": "https://github.com/Arachnid/deterministic-deployment-proxy/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "eth_getCode",
+        "rpc": "https://arb1.arbitrum.io/rpc",
+        "block": 512983522,
+        "codeBytes": 69,
+        "verifiedAt": "2026-10-08",
+        "result": "verified"
+      }
+    }
+  },
+  "rpc": [
+    {
+      "url": "https://arb1.arbitrum.io/rpc",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "verifiedAt": "2026-10-08",
+        "result": "reachable",
+        "latencyMs": 287
+      }
+    },
+    {
+      "url": "https://arbitrum-one-rpc.publicnode.com",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "verifiedAt": "2026-10-08",
+        "result": "reachable",
+        "latencyMs": 239
+      }
+    },
+    {
+      "url": "https://arbitrum.drpc.org",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "verifiedAt": "2026-10-08",
+        "result": "reachable",
+        "latencyMs": 262
+      }
+    }
+  ],
+  "explorers": [
+    {
+      "name": "Arbiscan",
+      "url": "https://arbiscan.io",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 0.25,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "hyperlaneReorgPeriodBlocks": {
+      "value": 5,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/arbitrum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "Hyperlane relayer/validator reorg period for this chain."
+    },
+    "notes": [
+      {
+        "text": "See cctp.finality for Circle fast/standard attestation timing.",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      }
+    ],
+    "measured": {
+      "measuredAt": "2026-10-08",
+      "finalizedTag": true,
+      "lagBlocks": 3472,
+      "lagSeconds": 940
+    }
+  }
+}

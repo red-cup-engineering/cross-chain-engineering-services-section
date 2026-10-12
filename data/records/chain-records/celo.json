@@ -1,0 +1,286 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "celo",
+  "name": "Celo",
+  "family": "evm",
+  "network": "mainnet",
+  "testnetOf": null,
+  "caip2": {
+    "value": "eip155:42220",
+    "source": "https://namespaces.chainagnostic.org/eip155/caip2",
+    "readAt": "2026-10-08",
+    "note": "CAIP-2 eip155 reference is the decimal EIP-155 chain id."
+  },
+  "chainId": {
+    "value": 42220,
+    "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+    "readAt": "2026-10-08",
+    "note": "Registry metadata value; verifier cross-checks with eth_chainId on every listed RPC."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "CELO",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 18,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "usdc": {
+    "kind": {
+      "value": "native",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "Listed by Circle as native USDC."
+    },
+    "address": {
+      "value": "0xcebA9300f2b948710d2653dD7B07f33A8B32118C",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 6,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "USDC is 6 decimals; verifier reads decimals() on-chain."
+    }
+  },
+  "cctp": {
+    "domain": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    },
+    "tokenMessengerV2": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    },
+    "messageTransmitterV2": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    },
+    "tokenMinterV2": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    }
+  },
+  "hyperlane": {
+    "domainId": {
+      "value": 42220,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "For EVM chains the Hyperlane domain id equals the chain id."
+    },
+    "mailbox": {
+      "value": "0x50da3B3907A08a24fe4999F4Dcf337E8dC7954bb",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "interchainGasPaymaster": {
+      "value": "0x571f1435613381208477ac5d6974310d88AC7cB7",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "merkleTreeHook": {
+      "value": "0x04dB778f05854f26E67e0a66b740BBbE9070D366",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "validatorAnnounce": {
+      "value": "0xCeF677b65FDaA6804d4403083bb12B8dB3991FE1",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticMessageIdMultisigIsmFactory": {
+      "value": "0xaB402f227e892Ef37C105bf06619c0fa106a1fB2",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticAggregationIsmFactory": {
+      "value": "0x1722dd970a1F56040712129f5Eeb76B003fd7500",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "domainRoutingIsmFactory": {
+      "value": "0x2A2c22B0a8615ad24839fA6Af302E896Af32d1a3",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/addresses.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "layerzero": {
+    "eid": {
+      "value": 30125,
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "stage": {
+      "value": "mainnet",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "endpointV2": {
+      "value": "0x1a44076050125825900e736c501f859c50fE728c",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "sendUln302": {
+      "value": "0x42b4E9C6495B4cFDaE024B1eC32E09F28027620e",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "receiveUln302": {
+      "value": "0xaDDed4478B423d991C21E525Cd3638FBce1AaD17",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "executor": {
+      "value": "0x1dDbaF8b75F2291A97C22428afEf411b7bB19e28",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    }
+  },
+  "ccip": {
+    "chainSelector": {
+      "value": "1346049177634351622",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08",
+      "note": "uint64 as decimal string"
+    },
+    "router": {
+      "value": "0xfB48f15480926A4ADf9116Dca468bDd2EE6C5F62",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08"
+    }
+  },
+  "eas": {
+    "eas": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No EAS deployment listed for this chain in the eas-contracts README."
+    },
+    "schemaRegistry": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No SchemaRegistry listed for this chain in the eas-contracts README."
+    }
+  },
+  "safe": {
+    "singleton": {
+      "value": "0x41675C099F32341bf84BFc5382aF534df5C7461a",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    },
+    "singletonL2": {
+      "value": "0x29fcB43b46531BcA003ddC8FCB67FFE91900C762",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_l2.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    },
+    "proxyFactory": {
+      "value": "0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_proxy_factory.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    }
+  },
+  "erc4337": {
+    "entryPointV07": {
+      "value": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "source": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0",
+      "readAt": "2026-10-08",
+      "note": "Release notes/README state the canonical address is the same on every chain."
+    },
+    "entryPointV08": {
+      "value": "0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108",
+      "source": "https://github.com/eth-infinitism/account-abstraction/blob/v0.8.0/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "permit2": {
+    "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "source": "https://docs.uniswap.org/contracts/permit2/overview",
+    "readAt": "2026-10-08",
+    "note": "Uniswap: same address on every supported chain except zkSync."
+  },
+  "multicall3": {
+    "value": "0xcA11bde05977b3631167028862bE2a173976CA11",
+    "source": "https://github.com/mds1/multicall3/blob/main/deployments.json",
+    "readAt": "2026-10-08"
+  },
+  "create2": {
+    "createX": {
+      "value": "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed",
+      "source": "https://github.com/pcaversaccio/createx/blob/main/README.md",
+      "readAt": "2026-10-08"
+    },
+    "arachnidProxy": {
+      "value": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "source": "https://github.com/Arachnid/deterministic-deployment-proxy/blob/master/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "rpc": [
+    {
+      "url": "https://forno.celo.org",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://celo-rpc.publicnode.com",
+      "source": "operator-or-aggregator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "explorers": [
+    {
+      "name": "CeloScan",
+      "url": "https://celoscan.io",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    {
+      "name": "Blockscout",
+      "url": "https://explorer.celo.org",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 1,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "hyperlaneReorgPeriodBlocks": {
+      "value": 5,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/celo/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "Hyperlane relayer/validator reorg period for this chain."
+    },
+    "notes": [
+      {
+        "text": "Not a CCTP V2 chain: native USDC cannot be burn/minted here via CCTP as of the read. Move value by a messaging layer or a bridge, or treat as a spoke with its own pool state.",
+        "source": "https://developers.circle.com/cctp/references/contract-addresses",
+        "readAt": "2026-10-08"
+      }
+    ]
+  }
+}

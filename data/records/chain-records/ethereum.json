@@ -1,0 +1,305 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "ethereum",
+  "name": "Ethereum",
+  "family": "evm",
+  "network": "mainnet",
+  "testnetOf": null,
+  "caip2": {
+    "value": "eip155:1",
+    "source": "https://namespaces.chainagnostic.org/eip155/caip2",
+    "readAt": "2026-10-08",
+    "note": "CAIP-2 eip155 reference is the decimal EIP-155 chain id."
+  },
+  "chainId": {
+    "value": 1,
+    "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+    "readAt": "2026-10-08",
+    "note": "Registry metadata value; verifier cross-checks with eth_chainId on every listed RPC."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "ETH",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 18,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "usdc": {
+    "kind": {
+      "value": "native",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "Listed by Circle as native USDC."
+    },
+    "address": {
+      "value": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 6,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "USDC is 6 decimals; verifier reads decimals() on-chain."
+    }
+  },
+  "cctp": {
+    "domain": {
+      "value": 0,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "tokenMessengerV2": {
+      "value": "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "messageTransmitterV2": {
+      "value": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "tokenMinterV2": {
+      "value": "0xfd78EE919681417d192449715b2594ab58f5D002",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "finality": {
+      "fast": {
+        "value": "2 confirmations, ~20 s",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      },
+      "standard": {
+        "value": "~65 ETH blocks, ~15-19 min",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      }
+    }
+  },
+  "hyperlane": {
+    "domainId": {
+      "value": 1,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "For EVM chains the Hyperlane domain id equals the chain id."
+    },
+    "mailbox": {
+      "value": "0xc005dc82818d67AF737725bD4bf75435d065D239",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "interchainGasPaymaster": {
+      "value": "0x9e6B1022bE9BBF5aFd152483DAD9b88911bC8611",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "merkleTreeHook": {
+      "value": "0x48e6c30B97748d1e2e03bf3e9FbE3890ca5f8CCA",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "validatorAnnounce": {
+      "value": "0xCe74905e51497b4adD3639366708b821dcBcff96",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticMessageIdMultisigIsmFactory": {
+      "value": "0xfA21D9628ADce86531854C2B7ef00F07394B0B69",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticAggregationIsmFactory": {
+      "value": "0x46FA191Ad972D9674Ed752B69f9659A0d7b22846",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "domainRoutingIsmFactory": {
+      "value": "0x28fA9552F19039b450498B0d8e5DEAe0d0aAc559",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/addresses.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "layerzero": {
+    "eid": {
+      "value": 30101,
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "stage": {
+      "value": "mainnet",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "endpointV2": {
+      "value": "0x1a44076050125825900e736c501f859c50fE728c",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "sendUln302": {
+      "value": "0xbB2Ea70C9E858123480642Cf96acbcCE1372dCe1",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "receiveUln302": {
+      "value": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "executor": {
+      "value": "0x173272739Bd7Aa6e4e214714048a9fE699453059",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    }
+  },
+  "ccip": {
+    "chainSelector": {
+      "value": "5009297550715157269",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08",
+      "note": "uint64 as decimal string"
+    },
+    "router": {
+      "value": "0x80226fc0Ee2b096224EeAc085Bb9a8cba1146f7D",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08"
+    }
+  },
+  "eas": {
+    "eas": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No EAS deployment listed for this chain in the eas-contracts README."
+    },
+    "schemaRegistry": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No SchemaRegistry listed for this chain in the eas-contracts README."
+    }
+  },
+  "safe": {
+    "singleton": {
+      "value": "0x41675C099F32341bf84BFc5382aF534df5C7461a",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    },
+    "singletonL2": {
+      "value": "0x29fcB43b46531BcA003ddC8FCB67FFE91900C762",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_l2.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    },
+    "proxyFactory": {
+      "value": "0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_proxy_factory.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    }
+  },
+  "erc4337": {
+    "entryPointV07": {
+      "value": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "source": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0",
+      "readAt": "2026-10-08",
+      "note": "Release notes/README state the canonical address is the same on every chain."
+    },
+    "entryPointV08": {
+      "value": "0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108",
+      "source": "https://github.com/eth-infinitism/account-abstraction/blob/v0.8.0/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "permit2": {
+    "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "source": "https://docs.uniswap.org/contracts/permit2/overview",
+    "readAt": "2026-10-08",
+    "note": "Uniswap: same address on every supported chain except zkSync."
+  },
+  "multicall3": {
+    "value": "0xcA11bde05977b3631167028862bE2a173976CA11",
+    "source": "https://github.com/mds1/multicall3/blob/main/deployments.json",
+    "readAt": "2026-10-08"
+  },
+  "create2": {
+    "createX": {
+      "value": "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed",
+      "source": "https://github.com/pcaversaccio/createx/blob/main/README.md",
+      "readAt": "2026-10-08"
+    },
+    "arachnidProxy": {
+      "value": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "source": "https://github.com/Arachnid/deterministic-deployment-proxy/blob/master/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "rpc": [
+    {
+      "url": "https://eth.drpc.org",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "source": "operator-or-aggregator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://ethereum.publicnode.com",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "explorers": [
+    {
+      "name": "Etherscan",
+      "url": "https://etherscan.io",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    {
+      "name": "Blockscout",
+      "url": "https://blockscout.com/eth/mainnet",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    {
+      "name": "Ethereum Explorer",
+      "url": "https://1.routescan.io",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 13,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "hyperlaneReorgPeriodBlocks": {
+      "value": 15,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/ethereum/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "Hyperlane relayer/validator reorg period for this chain."
+    },
+    "notes": [
+      {
+        "text": "See cctp.finality for Circle fast/standard attestation timing.",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      }
+    ]
+  }
+}

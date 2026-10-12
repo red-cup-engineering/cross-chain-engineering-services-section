@@ -1,0 +1,55 @@
+{
+  "name": "@red-cup-engineering/cross-chain-services-section",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Cross-chain field for Tidepool: schematized chain registry (EVM + Hive + Solana), multi-fork harness, deterministic multi-chain deployment, and the cross-chain field brief.",
+  "exports": {
+    ".": "./src/registry.mjs",
+    "./registry": "./src/registry.mjs",
+    "./rpc": "./src/rpc.mjs",
+    "./deterministic": "./src/deterministic.mjs",
+    "./schema/chain": "./schemas/chain.schema.json"
+  },
+  "bin": {
+    "cross-chain-registry": "./scripts/registry.mjs",
+    "cross-chain-verify": "./scripts/verify-chain-registry.mjs",
+    "cross-chain-forks": "./scripts/fork-chains.mjs",
+    "cross-chain-deploy": "./scripts/deploy-deterministic.mjs"
+  },
+  "files": [
+    "README.md",
+    "ROADMAP.md",
+    "src",
+    "scripts",
+    "contracts",
+    "data/records",
+    "content"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "registry:validate": "node scripts/registry.mjs validate",
+    "registry:verify": "node scripts/verify-chain-registry.mjs",
+    "registry:verify:write": "node scripts/verify-chain-registry.mjs --write",
+    "forks": "node scripts/fork-chains.mjs",
+    "fork-test": "cd ../ethereum-engineering-services-section && FOUNDRY_PROFILE=crosschain forge test",
+    "deploy:plan": "node scripts/deploy-deterministic.mjs plan"
+  },
+  "keywords": [
+    "tidepool",
+    "cross-chain",
+    "cctp",
+    "hyperlane",
+    "layerzero",
+    "ccip",
+    "hive",
+    "solana"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/json-schema-services-section": "workspace:*"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

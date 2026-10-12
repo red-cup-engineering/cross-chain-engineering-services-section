@@ -1,0 +1,308 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "solana",
+  "name": "Solana",
+  "family": "solana",
+  "network": "mainnet",
+  "testnetOf": null,
+  "caip2": {
+    "value": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+    "source": "https://namespaces.chainagnostic.org/solana/caip2",
+    "readAt": "2026-10-08",
+    "note": "First 32 base58 chars of the genesis hash; verifier cross-checks getGenesisHash."
+  },
+  "chainId": {
+    "value": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+    "source": "https://namespaces.chainagnostic.org/solana/caip2",
+    "readAt": "2026-10-08",
+    "note": "Genesis hash (mainnet-beta)."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "SOL",
+      "source": "https://solana.com/docs/core/tokens",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 9,
+      "source": "https://solana.com/docs/core/tokens",
+      "readAt": "2026-10-08",
+      "note": "1 SOL = 1e9 lamports"
+    }
+  },
+  "usdc": {
+    "kind": {
+      "value": "native",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "address": {
+      "value": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "SPL mint address",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644601,
+        "codeBytes": 82,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "false",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "decimals": {
+      "value": 6,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08"
+    }
+  },
+  "cctp": {
+    "domain": {
+      "value": 5,
+      "source": "https://developers.circle.com/cctp/concepts/supported-chains-and-domains",
+      "readAt": "2026-10-08"
+    },
+    "tokenMessengerMinterV2": {
+      "value": "CCTPV2vPZJS2u2BBsUoscuikbYjnpFmbFsvVuJdgUMQe",
+      "source": "https://developers.circle.com/cctp/references/solana-programs",
+      "readAt": "2026-10-08",
+      "note": "Solana program id (base58)",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644603,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "messageTransmitterV2": {
+      "value": "CCTPV2Sm4AdWt5296sk4P66VBZ7bEhcARwFaaS9YPbeC",
+      "source": "https://developers.circle.com/cctp/references/solana-programs",
+      "readAt": "2026-10-08",
+      "note": "Solana program id (base58)",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644604,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "finality": {
+      "fast": {
+        "value": "2-3 confirmations, ~8 s",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      },
+      "standard": {
+        "value": "32 confirmations, ~25 s",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      }
+    }
+  },
+  "hyperlane": {
+    "domainId": {
+      "value": 1399811149,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/solanamainnet/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "mailbox": {
+      "value": "E588QtVUvresuXq2KoNEwAmoifCzYGpRBdHByN9KQMbi",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/solanamainnet/addresses.yaml",
+      "readAt": "2026-10-08",
+      "note": "Solana program id (base58)",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644605,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "interchainGasPaymaster": {
+      "value": "JAvHW21tYXE9dtdG83DReqU2b4LUexFuCbtJT5tF8X6M",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/solanamainnet/addresses.yaml",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644606,
+        "codeBytes": 10947,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "false",
+          "matchesRegistry": true
+        }
+      }
+    }
+  },
+  "layerzero": {
+    "eid": {
+      "value": 30168,
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "endpointV2": {
+      "value": "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Solana program id (base58)",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644607,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "sendUln302": {
+      "value": "7a4WjyR8VZ7yZz5XJAKm39BUGn5iT9CKcv2pmG9tdXVH",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644609,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "receiveUln302": {
+      "value": "7a4WjyR8VZ7yZz5XJAKm39BUGn5iT9CKcv2pmG9tdXVH",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644610,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    },
+    "executor": {
+      "value": "6doghB248px58JSSwG4qejQ46kFMW4AMj7vzJnWZHNZn",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644612,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    }
+  },
+  "ccip": {
+    "chainSelector": {
+      "value": "124615329519749607",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08",
+      "note": "uint64 as decimal string"
+    },
+    "router": {
+      "value": "Ccip842gzYHhvdDkSyi2YVCoAWPbYJoApMFzSxQroE9C",
+      "source": "https://docs.chain.link/ccip/directory/mainnet",
+      "readAt": "2026-10-08",
+      "note": "Solana program id (base58)",
+      "verification": {
+        "method": "getAccountInfo",
+        "rpc": "https://api.mainnet-beta.solana.com",
+        "block": 454644613,
+        "codeBytes": 36,
+        "verifiedAt": "2026-10-08",
+        "result": "verified",
+        "probe": {
+          "call": "executable",
+          "returned": "true",
+          "matchesRegistry": true
+        }
+      }
+    }
+  },
+  "rpc": [
+    {
+      "url": "https://api.mainnet-beta.solana.com",
+      "source": "https://solana.com/docs/references/clusters",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://solana-rpc.publicnode.com",
+      "source": "aggregator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "explorers": [
+    {
+      "name": "Solana Explorer",
+      "url": "https://explorer.solana.com",
+      "source": "https://solana.com/docs/references/clusters",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 0.4,
+      "source": "https://solana.com/docs/references/clusters",
+      "readAt": "2026-10-08",
+      "note": "Not re-read; commonly cited slot time. Treated as informative only."
+    },
+    "notes": [
+      {
+        "text": "Use the finalized commitment level for evidence; the house solana-services-section already reads finalized getMultipleAccounts.",
+        "source": "/home/emsenn/info/lib/emsenn/services/561-group/services/engineering-services-section/services/computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/solana-services-section/README.md",
+        "readAt": "2026-10-08"
+      }
+    ]
+  }
+}

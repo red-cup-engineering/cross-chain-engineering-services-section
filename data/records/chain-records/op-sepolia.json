@@ -1,0 +1,276 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "op-sepolia",
+  "name": "OP Sepolia",
+  "family": "evm",
+  "network": "testnet",
+  "testnetOf": "optimism",
+  "caip2": {
+    "value": "eip155:11155420",
+    "source": "https://namespaces.chainagnostic.org/eip155/caip2",
+    "readAt": "2026-10-08",
+    "note": "CAIP-2 eip155 reference is the decimal EIP-155 chain id."
+  },
+  "chainId": {
+    "value": 11155420,
+    "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+    "readAt": "2026-10-08",
+    "note": "Registry metadata value; verifier cross-checks with eth_chainId on every listed RPC."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "ETH",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 18,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "usdc": {
+    "kind": {
+      "value": "native",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "Listed by Circle as native USDC."
+    },
+    "address": {
+      "value": "0x5fd84259d66Cd46123540766Be93DFE6D43130D7",
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 6,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "note": "USDC is 6 decimals; verifier reads decimals() on-chain."
+    }
+  },
+  "cctp": {
+    "domain": {
+      "value": 2,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "tokenMessengerV2": {
+      "value": "0x8FE6B999Dc680CcFDD5Bf7EB0974218be2542DAA",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "messageTransmitterV2": {
+      "value": "0xE737e5cEBEEBa77EFE34D4aa090756590b1CE275",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    },
+    "tokenMinterV2": {
+      "value": "0xb43db544E2c27092c107639Ad201b3dEfAbcF192",
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08"
+    }
+  },
+  "hyperlane": {
+    "domainId": {
+      "value": 11155420,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "For EVM chains the Hyperlane domain id equals the chain id."
+    },
+    "mailbox": {
+      "value": "0x6966b0E55883d49BFB24539356a2f8A673E02039",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "interchainGasPaymaster": {
+      "value": "0x28B02B97a850872C4D33C3E024fab6499ad96564",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "merkleTreeHook": {
+      "value": "0x86fb9F1c124fB20ff130C41a79a432F770f67AFD",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "validatorAnnounce": {
+      "value": "0x20c44b1E3BeaDA1e9826CFd48BeEDABeE9871cE9",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticMessageIdMultisigIsmFactory": {
+      "value": "0xfc6e546510dC9d76057F1f76633FCFfC188CB213",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticAggregationIsmFactory": {
+      "value": "0x275aCcCa81cAD931dC6fB6E49ED233Bc99Bed4A7",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "domainRoutingIsmFactory": {
+      "value": "0x16B710b86CAd07E6F1C531861a16F5feC29dba37",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/addresses.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "layerzero": {
+    "eid": {
+      "value": 40232,
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "stage": {
+      "value": "testnet",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "endpointV2": {
+      "value": "0x6EDCE65403992e310A62460808c4b910D972f10f",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "sendUln302": {
+      "value": "0xB31D2cb502E25B30C651842C7C3293c51Fe6d16f",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "receiveUln302": {
+      "value": "0x9284fd59B95b9143AF0b9795CAC16eb3C723C9Ca",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "executor": {
+      "value": "0xDc0D68899405673b932F0DB7f8A49191491A5bcB",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    }
+  },
+  "ccip": {
+    "chainSelector": {
+      "value": "5224473277236331295",
+      "source": "https://docs.chain.link/ccip/directory/testnet",
+      "readAt": "2026-10-08",
+      "note": "uint64 as decimal string"
+    },
+    "router": {
+      "value": "0x114A20A10b43D4115e5aeef7345a1A71d2a60C57",
+      "source": "https://docs.chain.link/ccip/directory/testnet",
+      "readAt": "2026-10-08"
+    }
+  },
+  "eas": {
+    "eas": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No EAS deployment listed for this chain in the eas-contracts README."
+    },
+    "schemaRegistry": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No SchemaRegistry listed for this chain in the eas-contracts README."
+    }
+  },
+  "safe": {
+    "singleton": {
+      "value": "0x41675C099F32341bf84BFc5382aF534df5C7461a",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    },
+    "singletonL2": {
+      "value": "0x29fcB43b46531BcA003ddC8FCB67FFE91900C762",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_l2.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    },
+    "proxyFactory": {
+      "value": "0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67",
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_proxy_factory.json",
+      "readAt": "2026-10-08",
+      "note": "Safe v1.4.1, deployment variant: canonical"
+    }
+  },
+  "erc4337": {
+    "entryPointV07": {
+      "value": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "source": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0",
+      "readAt": "2026-10-08",
+      "note": "Release notes/README state the canonical address is the same on every chain."
+    },
+    "entryPointV08": {
+      "value": "0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108",
+      "source": "https://github.com/eth-infinitism/account-abstraction/blob/v0.8.0/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "permit2": {
+    "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "source": "https://docs.uniswap.org/contracts/permit2/overview",
+    "readAt": "2026-10-08",
+    "note": "Uniswap: same address on every supported chain except zkSync."
+  },
+  "multicall3": {
+    "value": "0xcA11bde05977b3631167028862bE2a173976CA11",
+    "source": "https://github.com/mds1/multicall3/blob/main/deployments.json",
+    "readAt": "2026-10-08"
+  },
+  "create2": {
+    "createX": {
+      "value": "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed",
+      "source": "https://github.com/pcaversaccio/createx/blob/main/README.md",
+      "readAt": "2026-10-08"
+    },
+    "arachnidProxy": {
+      "value": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "source": "https://github.com/Arachnid/deterministic-deployment-proxy/blob/master/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "rpc": [
+    {
+      "url": "https://sepolia.optimism.io",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://optimism-sepolia-rpc.publicnode.com",
+      "source": "operator-or-aggregator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "explorers": [
+    {
+      "name": "OP Sepolia Explorer",
+      "url": "https://sepolia-optimistic.etherscan.io",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 2,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "hyperlaneReorgPeriodBlocks": {
+      "value": 0,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimismsepolia/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "Hyperlane relayer/validator reorg period for this chain."
+    },
+    "notes": [
+      {
+        "text": "See cctp.finality for Circle fast/standard attestation timing.",
+        "source": "https://developers.circle.com/cctp/concepts/finality-and-block-confirmations",
+        "readAt": "2026-10-08"
+      }
+    ]
+  }
+}

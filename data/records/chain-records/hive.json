@@ -1,0 +1,114 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "hive",
+  "name": "Hive",
+  "family": "hive",
+  "network": "mainnet",
+  "testnetOf": null,
+  "caip2": {
+    "value": "hive:beeab0de000000000000000000000000",
+    "source": "https://namespaces.chainagnostic.org/hive/caip2",
+    "readAt": "2026-10-08",
+    "note": "CAIP-2 Hive namespace is Draft (ChainAgnostic/namespaces PR 174): reference is the first 32 hex chars of HIVE_CHAIN_ID."
+  },
+  "chainId": {
+    "value": "beeab0de00000000000000000000000000000000000000000000000000000000",
+    "source": "https://github.com/openhive-network/hive/blob/master/libraries/protocol/include/hive/protocol/config.hpp",
+    "readAt": "2026-10-08",
+    "note": "HIVE_CHAIN_ID (32 bytes). Verifier reads it live from database_api.get_config."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "HIVE",
+      "source": "https://developers.hive.io/",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 3,
+      "source": "https://developers.hive.io/",
+      "readAt": "2026-10-08",
+      "note": "HIVE and HBD use precision 3 (observed in database_api.get_dynamic_global_properties NAI precision)."
+    }
+  },
+  "secondaryAssets": [
+    {
+      "symbol": {
+        "value": "HBD",
+        "source": "https://developers.hive.io/",
+        "readAt": "2026-10-08"
+      },
+      "decimals": {
+        "value": 3,
+        "source": "https://developers.hive.io/",
+        "readAt": "2026-10-08"
+      },
+      "note": "Hive Backed Dollar; the house settles pool tally in HBD today."
+    }
+  ],
+  "rpc": [
+    {
+      "url": "https://api.hive.blog",
+      "source": "https://developers.hive.io/",
+      "readAt": "2026-10-08",
+      "verification": {
+        "verifiedAt": "2026-10-08",
+        "result": "reachable",
+        "latencyMs": 406
+      }
+    },
+    {
+      "url": "https://api.deathwing.me",
+      "source": "operator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://anyx.io",
+      "source": "operator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "explorers": [
+    {
+      "name": "Hiveblocks",
+      "url": "https://hiveblocks.com",
+      "source": "public explorer; not first-party",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 3,
+      "source": "https://github.com/openhive-network/hive/blob/master/libraries/protocol/include/hive/protocol/config.hpp",
+      "readAt": "2026-10-08",
+      "note": "HIVE_BLOCK_INTERVAL"
+    },
+    "irreversibleThresholdBps": {
+      "value": 7500,
+      "source": "https://github.com/openhive-network/hive/blob/master/libraries/protocol/include/hive/protocol/config.hpp",
+      "readAt": "2026-10-08",
+      "note": "HIVE_IRREVERSIBLE_THRESHOLD = 75% of the 21 witnesses (HIVE_MAX_WITNESSES) must confirm; also readable live as last_irreversible_block_num via database_api.get_dynamic_global_properties."
+    },
+    "notes": [
+      {
+        "text": "Hive has no smart contracts and no EVM. Participation is via signed operations (custom_json, transfer) observed by relayers; EVM-side state is attestation, not execution.",
+        "source": "https://developers.hive.io/",
+        "readAt": "2026-10-08"
+      }
+    ],
+    "measured": {
+      "measuredAt": "2026-10-08",
+      "lagBlocks": 0,
+      "lagSeconds": 0,
+      "detail": "read from https://api.hive.blog; HIVE_CHAIN_ID matches"
+    }
+  },
+  "operations": {
+    "customJson": {
+      "value": "custom_json",
+      "source": "https://developers.hive.io/apidefinitions/#broadcast_ops_custom_json",
+      "readAt": "2026-10-08",
+      "note": "Operation used to carry application payloads (id string + json string, required_auths / required_posting_auths). Payload size limit and RC cost are protocol-defined; not re-measured here."
+    }
+  }
+}

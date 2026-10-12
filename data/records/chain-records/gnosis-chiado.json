@@ -1,0 +1,282 @@
+{
+  "$schema": "../schema/chain.schema.json",
+  "schemaVersion": 1,
+  "slug": "gnosis-chiado",
+  "name": "Gnosis Chiado",
+  "family": "evm",
+  "network": "testnet",
+  "testnetOf": "gnosis",
+  "caip2": {
+    "value": "eip155:10200",
+    "source": "https://namespaces.chainagnostic.org/eip155/caip2",
+    "readAt": "2026-10-08",
+    "note": "CAIP-2 eip155 reference is the decimal EIP-155 chain id."
+  },
+  "chainId": {
+    "value": 10200,
+    "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+    "readAt": "2026-10-08",
+    "note": "Registry metadata value; verifier cross-checks with eth_chainId on every listed RPC."
+  },
+  "nativeAsset": {
+    "symbol": {
+      "value": "xDai",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "decimals": {
+      "value": 18,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "usdc": {
+    "kind": {
+      "value": null,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Circle publishes no native USDC for this chain; a bridged USDC.e may exist but no first-party address was read."
+    },
+    "address": {
+      "value": null,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "No native USDC address listed by Circle for this chain."
+    },
+    "decimals": {
+      "value": null,
+      "source": "https://developers.circle.com/stablecoins/usdc-contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "n/a"
+    }
+  },
+  "cctp": {
+    "domain": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    },
+    "tokenMessengerV2": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    },
+    "messageTransmitterV2": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    },
+    "tokenMinterV2": {
+      "value": null,
+      "source": "https://developers.circle.com/cctp/references/contract-addresses",
+      "readAt": "2026-10-08",
+      "notFound": "Chain is not in Circle's CCTP V2 EVM contract-address tables as read."
+    }
+  },
+  "hyperlane": {
+    "domainId": {
+      "value": 10200,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "For EVM chains the Hyperlane domain id equals the chain id."
+    },
+    "mailbox": {
+      "value": "0x7323E06E40B0Fb82Dc26D309AaF14e49D266A6a7",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "interchainGasPaymaster": {
+      "value": null,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08",
+      "notFound": "interchainGasPaymaster not present in registry addresses.yaml"
+    },
+    "merkleTreeHook": {
+      "value": "0x9Da0eb6667033e01936cD914b46E32d9560D848B",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "validatorAnnounce": {
+      "value": "0xEb079356da4fE505ebA2018EB4D3B2db036B8Da5",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticMessageIdMultisigIsmFactory": {
+      "value": "0xEB94C84C1aDB6aBA8866EC457d85374642937E2d",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "staticAggregationIsmFactory": {
+      "value": "0xe95E3EF49b0fB2151301480d1845E760B5575A39",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08"
+    },
+    "domainRoutingIsmFactory": {
+      "value": "0x7c09b92a4818B08b8aA47a11698652fC6Aee11F0",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/addresses.yaml",
+      "readAt": "2026-10-08"
+    }
+  },
+  "layerzero": {
+    "eid": {
+      "value": 40145,
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "stage": {
+      "value": "testnet",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08"
+    },
+    "endpointV2": {
+      "value": "0x6EDCE65403992e310A62460808c4b910D972f10f",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "sendUln302": {
+      "value": "0xddF3266fEAa899ACcf805F4379E5137144cb0A7D",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "receiveUln302": {
+      "value": "0xC22825d9982365d31E63CC3b5589B17067e795b1",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    },
+    "executor": {
+      "value": "0xe3826C822a53a736cC4d8f6FD884a6E3A461d29F",
+      "source": "https://metadata.layerzero-api.com/v1/metadata/deployments",
+      "readAt": "2026-10-08",
+      "note": "Source lists the address lowercase; EIP-55 checksum applied by normalize-chain-registry."
+    }
+  },
+  "ccip": {
+    "chainSelector": {
+      "value": "8871595565390010547",
+      "source": "https://docs.chain.link/ccip/directory/testnet",
+      "readAt": "2026-10-08",
+      "note": "uint64 as decimal string"
+    },
+    "router": {
+      "value": "0x19b1bac554111517831ACadc0FD119D23Bb14391",
+      "source": "https://docs.chain.link/ccip/directory/testnet",
+      "readAt": "2026-10-08"
+    }
+  },
+  "eas": {
+    "eas": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No EAS deployment listed for this chain in the eas-contracts README."
+    },
+    "schemaRegistry": {
+      "value": null,
+      "source": "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/README.md",
+      "readAt": "2026-10-08",
+      "notFound": "No SchemaRegistry listed for this chain in the eas-contracts README."
+    }
+  },
+  "safe": {
+    "singleton": {
+      "value": null,
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe.json",
+      "readAt": "2026-10-08",
+      "notFound": "Chain id 10200 not in safe-deployments v1.4.1 networkAddresses."
+    },
+    "singletonL2": {
+      "value": null,
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_l2.json",
+      "readAt": "2026-10-08",
+      "notFound": "Chain id 10200 not in safe-deployments v1.4.1 networkAddresses."
+    },
+    "proxyFactory": {
+      "value": null,
+      "source": "https://github.com/safe-global/safe-deployments/blob/main/src/assets/v1.4.1/safe_proxy_factory.json",
+      "readAt": "2026-10-08",
+      "notFound": "Chain id 10200 not in safe-deployments v1.4.1 networkAddresses."
+    }
+  },
+  "erc4337": {
+    "entryPointV07": {
+      "value": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "source": "https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.7.0",
+      "readAt": "2026-10-08",
+      "note": "Release notes/README state the canonical address is the same on every chain."
+    },
+    "entryPointV08": {
+      "value": "0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108",
+      "source": "https://github.com/eth-infinitism/account-abstraction/blob/v0.8.0/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "permit2": {
+    "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "source": "https://docs.uniswap.org/contracts/permit2/overview",
+    "readAt": "2026-10-08",
+    "note": "Uniswap: same address on every supported chain except zkSync."
+  },
+  "multicall3": {
+    "value": "0xcA11bde05977b3631167028862bE2a173976CA11",
+    "source": "https://github.com/mds1/multicall3/blob/main/deployments.json",
+    "readAt": "2026-10-08"
+  },
+  "create2": {
+    "createX": {
+      "value": "0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed",
+      "source": "https://github.com/pcaversaccio/createx/blob/main/README.md",
+      "readAt": "2026-10-08"
+    },
+    "arachnidProxy": {
+      "value": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "source": "https://github.com/Arachnid/deterministic-deployment-proxy/blob/master/README.md",
+      "readAt": "2026-10-08"
+    }
+  },
+  "rpc": [
+    {
+      "url": "https://rpc.chiadochain.net",
+      "source": "operator-or-aggregator public endpoint; reachability measured by verifier",
+      "readAt": "2026-10-08"
+    },
+    {
+      "url": "https://gnosis-chiado-rpc.publicnode.com",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "explorers": [
+    {
+      "name": "Chiado Explorer",
+      "url": "https://gnosis-chiado.blockscout.com",
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08"
+    }
+  ],
+  "finality": {
+    "blockTimeSeconds": {
+      "value": 5,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08"
+    },
+    "hyperlaneReorgPeriodBlocks": {
+      "value": 5,
+      "source": "https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/gnosischiado/metadata.yaml",
+      "readAt": "2026-10-08",
+      "note": "Hyperlane relayer/validator reorg period for this chain."
+    },
+    "notes": [
+      {
+        "text": "Testnet; no CCTP.",
+        "source": "https://developers.circle.com/cctp/references/contract-addresses",
+        "readAt": "2026-10-08"
+      }
+    ]
+  }
+}
