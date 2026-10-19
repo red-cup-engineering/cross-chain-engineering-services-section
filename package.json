@@ -51,5 +51,9 @@
   },
   "engines": {
     "node": ">=22.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/cross-chain-services-section.git"
   }
 }
