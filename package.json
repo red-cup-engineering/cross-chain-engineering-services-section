@@ -44,7 +44,7 @@
     "hive",
     "solana"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "workspace:*",
     "@red-cup-engineering/json-schema-services-section": "workspace:*"
@@ -55,5 +55,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/cross-chain-services-section.git"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
   }
 }
