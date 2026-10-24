@@ -7,7 +7,7 @@
 [![Tips welcome](https://img.shields.io/badge/tips-welcome-d4a017)](https://github.com/561-group/.github/blob/main/TIPS.md)
 <!-- 561-group-standards:badges:end -->
 
-`@red-cup-engineering/cross-chain-engineering-services-section` 0.1.0. The ground for Tidepool on more than one chain:
+`@red-cup-engineering/cross-chain-services-section` 0.1.0. The ground for Tidepool on more than one chain:
 a cited, schematized registry of every chain we may stand on, a multi-fork harness, and a deterministic
 deployment path that puts one contract at one address on every EVM chain.
 
