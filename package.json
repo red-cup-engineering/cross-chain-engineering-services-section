@@ -1,5 +1,5 @@
 {
-  "name": "@red-cup-engineering/cross-chain-services-section",
+  "name": "@red-cup-engineering/cross-chain-engineering-services-section",
   "version": "0.1.0",
   "type": "module",
   "description": "Cross-chain field for Tidepool: schematized chain registry (EVM + Hive + Solana), multi-fork harness, deterministic multi-chain deployment, and the cross-chain field brief.",
@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/cross-chain-services-section.git"
+    "url": "git+https://github.com/red-cup-engineering/cross-chain-engineering-services-section.git"
   },
   "funding": {
     "type": "individual",
