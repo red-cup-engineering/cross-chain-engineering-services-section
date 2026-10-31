@@ -25,7 +25,7 @@ script (rehearsed on Base and Arbitrum forks: same address `0xA90Cf2A56817A6CE8A
    with a fixture record.
 5. **Wormhole and Across fields.** Add `wormhole` (core bridge, chain id) and `across` (SpokePool, ERC-7683 settler)
    to the schema and records, each cited and verified. Accept: schema validates; `chainsWith(registry, "across.spokePool")`.
-6. **Hive operation catalogue.** Schema section `operations` for Hive: custom_json ids the house uses (grep
+6. **Hive operation catalogue.** Schema section `operations` for Hive: custom_json ids the Group uses (grep
    hive-fleet-operations-service scripts), with size limit read from a first-party source. Accept: record validates.
 
 ## Phase 2 - harness (code)
@@ -70,6 +70,6 @@ script (rehearsed on Base and Arbitrum forks: same address `0xA90Cf2A56817A6CE8A
 ## Phase 5 - operations
 1. Registry refresh as a scheduled MAPE-K loop with the staleness gate.
 2. Treasury-observation-service: replace its private `chains.mjs` registry with this one (it carries 8 chains,
-   no CAIP-2 source, and drifts). Accept: its tests pass against registry data; one chain list in the house.
+   no CAIP-2 source, and drifts). Accept: its tests pass against registry data; one chain list in the Group.
 3. Fix `computer-blockchain-system-services-section/README.md` holdings (names a non-existent
    `ethereum-services-section`).
