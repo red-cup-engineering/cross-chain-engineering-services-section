@@ -80,4 +80,4 @@ is read-from-source, unverified on-chain. Widen with `--all` on a machine with h
 
 ## Broken or duplicated elsewhere (found while surveying)
 
-See the field brief, "Survey of what the house already has".
+See the field brief, "Survey of what the Group already has".
